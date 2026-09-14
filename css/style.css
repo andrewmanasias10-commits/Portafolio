@@ -324,6 +324,29 @@ h2.rec-name{
   .preview-grid{grid-template-columns:1fr;}
 }
 
+/* ---------- Tarjetas de certificaciones (Sobre mi) ---------- */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+  margin-top:24px;
+}
+@media (max-width:700px){
+  .cert-grid{grid-template-columns:1fr;}
+}
+.cert-card{
+  border:1px solid var(--line-on-ink);
+  background:var(--ink-panel);
+  padding:20px;
+  transition:transform .25s ease;
+}
+.tone-paper .cert-card{border-color:var(--line-on-paper); background:var(--paper-panel);}
+.cert-card:hover{transform:translateY(-3px);}
+.cert-card h3{font-size:1.02rem; margin-bottom:6px;}
+.cert-issuer{font-size:0.92rem; margin-bottom:2px;}
+.cert-meta{font-family:var(--sans); font-weight:600; font-size:12.5px; color:var(--text-on-ink-soft); margin-bottom:10px;}
+.tone-paper .cert-meta{color:var(--text-on-paper-soft);}
+
 /* ---------- Linea de tiempo (Sobre mi) ---------- */
 .timeline{
   position:relative;
